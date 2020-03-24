@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Create User</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	//Check existence
+	//var body = GlideStringUtil.getStringFromStream(request.body.dataStream);
+	var body = request.body.dataString;
+
+	gs.info(body, 'E-Commerce');
+
+	if(body == '') {
+		response.setStatus(400);
+		response.setError('No body information given.');
+	}
+
+	var jsonBody = JSON.parse(body);
+
+	if(!jsonBody.email) {
+		response.setStatus(400);
+		response.setError({"detail" : "There was no email given within the body", "message" : "Please add an email to the body"});
+	}
+
+	//Search user with email
+	var userGR = new GlideRecord('sys_user');
+	if(userGR.get('email', jsonBody.email)) {
+		response.setStatus(200); // 201 wordt niet opgevangen door ecom app (alleen 200 als het ok is)
+		response.setBody('User reeds aanwezig');
+		return { 'sys_id' : userGR.getUniqueValue() };
+	} else {
+		//Create user
+		userGR.initialize();
+
+		userGR.first_name = jsonBody.firstName;
+		if (jsonBody.middleName!= null && jsonBody.middleName.length > 0){
+			userGR.last_name = jsonBody.middleName + " " + jsonBody.lastName;
+		}
+		else {
+			userGR.last_name = jsonBody.lastName;
+		}
+		userGR.company = jsonBody.company.value;
+		userGR.email = jsonBody.email;
+		userGR.user_name = jsonBody.email;
+		
+		//Generate random temp password
+		var generatedPassword = new global.PwdDefaultAutoGenPassword().generatePassword();
+		if(generatedPassword) {
+			userGR.user_password = generatedPassword;
+			userGR.password_needs_reset = true;
+		}
+		
+		var userId = userGR.insert();
+		
+		if(userId) {
+			//Get user record to send notification
+			var newUserGR = new GlideRecord('sys_user');
+			newUserGR.get(userId);
+			
+			//Fire off event for the notification
+			gs.eventQueue('ecom.new.user', newUserGR, '', generatedPassword);
+			
+			response.setStatus(200);
+			return { 'sys_id' : userId };
+		} else {
+			response.setStatus(500);
+			response.setError('Could not create the user, contact the ServiceNow Admins');
+		}
+	}
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_bocn_ecommerce/ecom/sys_user</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/sys_user</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>wybren.vanbeemdelust@bnc.nl</sys_created_by>
+        <sys_created_on>2019-11-19 15:09:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>70851194db5940508dc6f9971d961975</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Create User</sys_name>
+        <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
+        <sys_update_name>sys_ws_operation_70851194db5940508dc6f9971d961975</sys_update_name>
+        <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
+        <sys_updated_on>2020-03-24 13:45:41</sys_updated_on>
+        <web_service_definition display_value="ECOM">f065ddd8db5940508dc6f9971d96197a</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
