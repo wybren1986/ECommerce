@@ -28,7 +28,7 @@
 	}
 
 	//Search user with email
-	var userGR = new GlideRecord('sys_user');
+	var userGR = new GlideRecord('customer_contact');
 	if(userGR.get('email', jsonBody.email)) {
 		response.setStatus(200); // 201 wordt niet opgevangen door ecom app (alleen 200 als het ok is)
 		response.setBody('User reeds aanwezig');
@@ -49,7 +49,7 @@
 		userGR.user_name = jsonBody.email;
 		
 		//Generate random temp password
-		var generatedPassword = new global.PwdDefaultAutoGenPassword().generatePassword();
+		var generatedPassword = new EcomPasswordGenerator().createPronounceablePassword(12);
 		if(generatedPassword) {
 			userGR.user_password = generatedPassword;
 			userGR.password_needs_reset = true;
@@ -88,7 +88,7 @@
         <sys_created_on>2019-11-19 15:09:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>70851194db5940508dc6f9971d961975</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Create User</sys_name>
         <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
         <sys_policy/>
@@ -96,7 +96,7 @@
         <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
         <sys_update_name>sys_ws_operation_70851194db5940508dc6f9971d961975</sys_update_name>
         <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
-        <sys_updated_on>2020-03-24 13:45:41</sys_updated_on>
+        <sys_updated_on>2020-08-11 08:23:27</sys_updated_on>
         <web_service_definition display_value="ECOM">f065ddd8db5940508dc6f9971d96197a</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
