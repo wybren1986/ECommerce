@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_email_layout">
+    <sys_email_layout action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <advanced_layout/>
+        <description>Default Ecomm layout</description>
+        <layout><![CDATA[<table style="height: 100%; background-color: #f2f2f2;" border="0" width="100%" cellspacing="0" cellpadding="0" height="100%">
+<tbody>
+<tr>
+<td style="text-align: left; vertical-align: top; padding: 16px;" colspan="1">
+<table style="margin-left: auto; margin-right: auto;" border="0" width="696" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="background-color: #00a8e1; text-align: center; padding: 16px; width: 400px; height: 60px;">Logo</td>
+</tr>
+<tr>
+<td style="padding-top: 32px; padding-bottom: 16px; border-radius: 5px; background-color: #ffffff; font-size: 10pt; color: #838383; font-family: arial, helvetica, sans-serif; line-height: 1.4;">
+<p>${notification:body}</p>
+</td>
+</tr>
+<tr>
+<td style="background-color: #00a8e1; text-align: center; padding: 16px; width: 400px; height: 60px;">Sharing Ideas &amp; IT</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>]]></layout>
+        <name>Ecomm Layout</name>
+        <sys_class_name>sys_email_layout</sys_class_name>
+        <sys_created_by>wybren.vanbeemdelust@bnc.nl</sys_created_by>
+        <sys_created_on>2020-12-07 10:08:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>532331fb1b34ec50f2b3ed7cee4bcb3e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Ecomm Layout</sys_name>
+        <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
+        <sys_update_name>sys_email_layout_532331fb1b34ec50f2b3ed7cee4bcb3e</sys_update_name>
+        <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
+        <sys_updated_on>2020-12-07 11:26:17</sys_updated_on>
+    </sys_email_layout>
+</record_update>

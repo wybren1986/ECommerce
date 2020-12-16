@@ -5,17 +5,63 @@
         <consumes_customized>false</consumes_customized>
         <default_operation_uri/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
-        <http_method>GET</http_method>
-        <name>getEcomDebtors</name>
+        <http_method>POST</http_method>
+        <name>emailUserNewEcomAccount</name>
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
-    // implement resource here
+	var userDTOString = request.body.dataString;
+
+	if (userDTOString == '') {
+		response.setStatus(400);
+		response.setBody({
+			"detail": "There was no body given",
+			"message": "Please add an json body with a email"
+		});
+	}
+
+	var userDTO = JSON.parse(userDTOString);
+
+	if (!userDTO.email) {
+		response.setStatus(400);
+		response.setBody({
+			"detail": "There was no email given within the body",
+			"message": "Please add an email to the body"
+		});
+	}
+
+	var userGR = new GlideRecord('customer_contact');
+	if(userGR.get('email', userDTO.email)) {
+		if (userGR.last_login_time) {
+			//Fire off event to sent they have an ecom login with their servicenow credentials
+			gs.eventQueue('x_bocn_ecommerce.ecom.invite.user', userGR, '', '');
+		} else {
+			//Generate random temp password
+			var generatedPassword = new EcomPasswordGenerator().createPronounceablePassword(12);
+			if (generatedPassword) {
+				userGR.user_password = generatedPassword;
+				userGR.password_needs_reset = true;
+			}
+			//Fire off event to mail username + password
+			gs.eventQueue('x_bocn_ecommerce.ecom.new.user', userGR, '', generatedPassword);
+		}
+
+		//Sent success and user id
+		response.setStatus(200); // 201 wordt niet opgevangen door ecom app (alleen 200 als het ok is)
+		return {
+			'sys_id': userGR.getUniqueValue()
+		};
+	} else {
+		response.setStatus(400);
+		response.setBody({
+			'error': 'No user was found'
+		});
+	}
 
 })(request, response);]]></operation_script>
-        <operation_uri>/api/x_bocn_ecommerce/ecom/core_company</operation_uri>
+        <operation_uri>/api/x_bocn_ecommerce/ecom/email/sys_user</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
         <produces_customized>false</produces_customized>
-        <relative_path>/core_company</relative_path>
+        <relative_path>/email/sys_user</relative_path>
         <request_example/>
         <requires_acl_authorization>true</requires_acl_authorization>
         <requires_authentication>true</requires_authentication>
@@ -26,15 +72,15 @@
         <sys_created_on>2020-04-01 13:57:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>01e7c797dbf7c0948dc6f9971d961942</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>getEcomDebtors</sys_name>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>emailUserNewEcomAccount</sys_name>
         <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
         <sys_update_name>sys_ws_operation_01e7c797dbf7c0948dc6f9971d961942</sys_update_name>
-        <sys_updated_by>Teun.Blijlevens@bnc.nl</sys_updated_by>
-        <sys_updated_on>2020-04-01 13:57:48</sys_updated_on>
+        <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
+        <sys_updated_on>2020-12-16 10:24:42</sys_updated_on>
         <web_service_definition display_value="ECOM">f065ddd8db5940508dc6f9971d96197a</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

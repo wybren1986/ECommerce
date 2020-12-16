@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>wybren.vanbeemdelust@bnc.nl</sys_created_by>
+        <sys_created_on>2020-12-16 10:06:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6409847a1bc924d0f2b3ed7cee4bcb3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ScriptableServiceResultBuilder.setBody</sys_name>
+        <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
+        <sys_update_name>sys_scope_privilege_6409847a1bc924d0f2b3ed7cee4bcb3f</sys_update_name>
+        <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
+        <sys_updated_on>2020-12-16 10:06:12</sys_updated_on>
+        <target_name>ScriptableServiceResultBuilder.setBody</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>scriptable</target_type>
+    </sys_scope_privilege>
+</record_update>
