@@ -18,17 +18,18 @@
 
     if (body == '') {
         response.setStatus(400);
-        response.setError('No body information given.');
+		response.setBody({
+			'error': 'No body given'
+		});
     }
 
     var jsonBody = JSON.parse(body);
 
     if (!jsonBody.email) {
         response.setStatus(400);
-        response.setError({
-            "detail": "There was no email given within the body",
-            "message": "Please add an email to the body"
-        });
+		response.setBody({
+			'error': 'There was no email given within the body'
+		});
     }
 
     //Search user with email
@@ -72,7 +73,9 @@
             };
         } else {
             response.setStatus(500);
-            response.setError('Could not create the user, contact the ServiceNow Admins');
+			response.setBody({
+				'error': 'Could not create the user, contact the ServiceNow Admins'
+			});
         }
     }
 
@@ -91,15 +94,15 @@
         <sys_created_on>2019-11-19 15:09:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>70851194db5940508dc6f9971d961975</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Create User</sys_name>
         <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
         <sys_update_name>sys_ws_operation_70851194db5940508dc6f9971d961975</sys_update_name>
-        <sys_updated_by>Teun.Blijlevens@bnc.nl</sys_updated_by>
-        <sys_updated_on>2020-12-10 16:04:14</sys_updated_on>
+        <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
+        <sys_updated_on>2020-12-16 10:56:24</sys_updated_on>
         <web_service_definition display_value="ECOM">f065ddd8db5940508dc6f9971d96197a</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
