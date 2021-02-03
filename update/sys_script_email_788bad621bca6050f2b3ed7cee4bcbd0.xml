@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bnc.ecom.directnaarshoplink</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template, /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action, /* Optional GlideRecord */ event) {
+
+	// Add your code here
+	var link = 'https://webshop.bnc.nl/';
+	var tekst = 'Direct naar de webshop';
+	
+	template.print('<table border="0" cellspacing="0" cellpadding="0" align="center" style="table-layout:fixed; width:100%; height:30px; background-color:#ffffff; margin:0px; padding:0px"><tbody><tr><td align="center" bgcolor="#00a8e1" width="180" height="30" style="width:180px; height:30px; border-radius:20px; background-color:#00a8e1"><strong style="padding:0px; text-decoration:none; color:#ffffff; font-weight:normal"><a href="'+link+'" target="_blank" rel="noopener noreferrer" data-auth="NotApplicable" style="background-color:#00a8e1; color:#ffffff; font-family:Arial,Helvetica,sans-serif; font-size:14px; line-height:14px; text-align:center; display:inline-block;padding:0px; text-decoration:none; margin:0px">'+tekst+'</a></strong></td><td width="7" style="width:7px"><br></td><td><br></td></tr></tbody></table>');
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>wybren.vanbeemdelust@bnc.nl</sys_created_by>
+        <sys_created_on>2021-02-03 15:41:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>788bad621bca6050f2b3ed7cee4bcbd0</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>bnc.ecom.directnaarshoplink</sys_name>
+        <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
+        <sys_update_name>sys_script_email_788bad621bca6050f2b3ed7cee4bcbd0</sys_update_name>
+        <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
+        <sys_updated_on>2021-02-03 16:03:24</sys_updated_on>
+    </sys_script_email>
+</record_update>

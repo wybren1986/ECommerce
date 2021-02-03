@@ -35,27 +35,12 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>Goedemiddag ${name},</p>
-<p>Wij hebben een account voor u aangemaakt zodat u bestellingen kunt doen in onze webshop.</p>
-<p><strong>Hierbij uw inloggegevens</strong></p>
-<table style="border-collapse: collapse; width: 60%; height: 26px;" border="0">
-<tbody>
-<tr style="height: 13px; font-size: 10pt; color: #838383; font-family: arial, helvetica, sans-serif; line-height: 1.4;">
-<td style="width: 50%; height: 13px; font-size: 10pt; color: #838383; font-family: arial, helvetica, sans-serif; line-height: 1.4;">Gebruikersnaam</td>
-<td style="width: 50%; height: 13px; font-size: 10pt; color: #838383; font-family: arial, helvetica, sans-serif; line-height: 1.4;">
-<div>${user_name}</div>
-</td>
-</tr>
-<tr style="height: 13px; font-size: 10pt; color: #838383; font-family: arial, helvetica, sans-serif; line-height: 1.4;">
-<td style="width: 50%; height: 13px; font-size: 10pt; color: #838383; font-family: arial, helvetica, sans-serif; line-height: 1.4;">Tijdelijk wachtwoord*</td>
-<td style="width: 50%; height: 13px; font-size: 10pt; color: #838383; font-family: arial, helvetica, sans-serif; line-height: 1.4;">${event.parm2}</td>
-</tr>
-</tbody>
-</table>
-<p><em>*Uw wachtwoord dient gewijzigd te worden bij de eerste keer inloggen</em></p>
-<p><a title="Klik hier om in te loggen" href="https://beta-webshop.bnc.nl" target="_blank" rel="noopener">Klik hier om in te loggen</a></p>
-<p>Met vriendelijke groet,</p>
-<p>Bossers &amp; Cnossen</p>]]></message_html>
+        <message_html><![CDATA[<p><img src="emailBannerNewUser.png" width="400" height="200" /></p>
+<p><br />Welkom ${first_name},</p>
+<p>Je ontvangt deze email omdat je aangemeld bent als gebruiker van de B&amp;C webshop. <br />Je ontvangt van ons een tijdelijk wachtwoord. <br />Zodra je hiermee voor het eerst inlogt kan je direct zelf een nieuw wachtwoord invoeren.</p>
+<p>De gebruikersnaam waarmee jij aangemeld bent: ${user_name}<br />Jouw tijdelijke wachtwoord: ${event.parm2}<br /></p>
+<p>${mail_script:bnc.ecom.directnaarshoplink}</p>
+<p>vriendelijke groet, Team Ecommerce<br /><br /></p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>Nieuwe gebruiker E-Commerce</name>
@@ -78,7 +63,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>19fb35b8db3b40548dc6f9971d961958</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Nieuwe gebruiker E-Commerce</sys_name>
         <sys_overrides/>
         <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
@@ -87,7 +72,7 @@
         <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
         <sys_update_name>sysevent_email_action_19fb35b8db3b40548dc6f9971d961958</sys_update_name>
         <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
-        <sys_updated_on>2020-12-16 10:33:18</sys_updated_on>
+        <sys_updated_on>2021-02-03 16:06:03</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Ecomm Template">a6c23d771b34ec50f2b3ed7cee4bcb5e</template>
         <type>email</type>

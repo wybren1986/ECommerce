@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <format>png</format>
+        <height>16</height>
+        <image>a557e5e61b8a6050f2b3ed7cee4bcbc7</image>
+        <name>emailBannerBottomSharing.png</name>
+        <size_bytes>1246</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>wybren.vanbeemdelust@bnc.nl</sys_created_by>
+        <sys_created_on>2021-02-03 15:22:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5c4769a61b8a6050f2b3ed7cee4bcbcc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>emailBannerBottomSharing.png</sys_name>
+        <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
+        <sys_update_name>db_image_5c4769a61b8a6050f2b3ed7cee4bcbcc</sys_update_name>
+        <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
+        <sys_updated_on>2021-02-03 15:22:38</sys_updated_on>
+        <thumbnail/>
+        <width>130</width>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#ffffff</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <hash>03c955de70f1188686199618a8e8b50a4686707acbe2dbd7a37569164b2f39aa</hash>
+        <image_height>16</image_height>
+        <image_width>130</image_width>
+        <size_bytes>1246</size_bytes>
+        <size_compressed>1269</size_compressed>
+        <state>available</state>
+        <sys_created_by>wybren.vanbeemdelust@bnc.nl</sys_created_by>
+        <sys_created_on>2021-02-03 15:22:38</sys_created_on>
+        <sys_id>a557e5e61b8a6050f2b3ed7cee4bcbc7</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
+        <sys_updated_on>2021-02-03 15:22:38</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>5c4769a61b8a6050f2b3ed7cee4bcbcc</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="a557e5e61b8a6050f2b3ed7cee4bcbc7">a557e5e61b8a6050f2b3ed7cee4bcbc7</sys_attachment>
+        <sys_created_by>wybren.vanbeemdelust@bnc.nl</sys_created_by>
+        <sys_created_on>2021-02-03 15:22:38</sys_created_on>
+        <sys_id>e557e5e61b8a6050f2b3ed7cee4bcbc7</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>Ad4EIfuJUE5HDQoaCgAAAA1JSERSAAAAggAAABAIBgAAANqtp7UAAAAJcEhZcwAACxMAAAsTAQCanBgAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAABHNJREFUeAHtWeFVGzEMVnj5z22AOwHtBLlOAJ2AMAF0ggsThE6QMEHSCZJOcHQCjgl6ncDVhz9T17WTO0j6Ssv3np7PtizJsizbyUACWGtLLQyrzWAwWAd9b7U407aPsmOo7EKLqco+lz1DdU21uFJd7Qaevc21L7gmI6VG6Yva1HQYc6rFmtVT2Y7lAQcapTv9rJSOSRXa6BSg6Cj0KYDsUv4MMJ/DLTz7nGtnqO8nWiBwG3EbdMVNsw0X4tYQGAV0ojSL2kahwlqpShgyVjrmd8lg+efxt8zVOpigPlO66DAOATNKtGPD29SYISMMu+S3HaBpaJ5RhDFnrH6O0xXT2XGq32cYbbslH3AL/V6fT21I32Fq1PpNwpbHfmHqxHgtl5K2/VF2SkZKR4KvlfS8fSY5UvqasmGbjAjx8QXfLWUPOKBDQG+6DECW0GIlLlXBsNpHLRyhtBCXgvwkVkxxHug70ba5uLQHp8GBs4DngjwrfgMT1kNbFhzng3nGQJtKHug7DOxdBTJK1k2kxwS2NKl50S8zym5o/120o2txG8jLWGjbpeRxxTl5vyKAP8u+AGOYhqD0NDQ+4IGTvoEnal/wAubrRdRvOK5gvaKDqojHBvUVeUYxj+KI9Ql5iohnsSmtc4yXcc1jMZZRhzIos4rkFOQrU/Nm29T7hn5dJXg2nvn0he1yJERjeh0NMVMVKMYkz4J+HwgmGjdOTTDiqb1h1LHYZCBtmCbk3AVy7jKTLXsEAubzNsFz6mWgPycvt7ipfi1P6AcjHcFgr0mzoN2k/BP09w6Eof/gWYVUdGV/nnUwZKx978nWbnu+WJfqYARkNCzjqG9lO2436DBaGLXlS6K7kQ6gjAJ3lUR3aB8CpbBRJiQwLxPIq1j3x63xjEjpDDosUiPueXeT8yf9iGPU+x7jJso/oVwjO8Qw1ch7w1wVw0m130HbYN05iSA4jy5jtewWLeUWm34P6IKOMh78ken7zhI7fxwGp3UX08eUrn1+oyEg4Ccs7g0XNway8aW3Tfnekx9VrMdSdoghlZhMZDbSDzD+OuHYZy1WDL4m1uJ2THzLLzvKaBjoKRkm+IbDkYbvU6+E4GXTJjJUm9ENvXg1Qe83pUmCDdlmEIyBng/iAq7Y9Y9vB5wEIu3M/nrDLWggnlT3HeWtJVoI627WD+lVdgvsLlz2TgJdpbiFfa6McBe35FtE/vFpHm1Y2CLqxzcCyF+SL8M7F1FKfrPNYUfmTtHaX19iz8YQPyMz7eB8u2bqweQxAeyGdz3kfRL33MHlai0uAOaQq4Qzb2dPH9p9TpsntBcL8rBoHWUsGfChjEYJcrHwI+xyJfQfcm7eN8C5zxLaDr0rZhn0t5TjL27wZUU9ngf0IWPbFS+EdSRzrHRPuZI5Vp4P655Fne4E+5TRU9+R/fk8LZ9yJwlldOA7eqoc75s+/unL/1+BTyuTaJ9lbviv2IChvFwg1c6YNnFJ8z97Z9PtK/IYyAsGM0Ip7n8NnJ/rzG8Lr9iCH4OPLI79wH5QAAAAAElFTkSuQmCCwaiWjt4EAAA=</data>
+        <length>1680</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="a557e5e61b8a6050f2b3ed7cee4bcbc7">a557e5e61b8a6050f2b3ed7cee4bcbc7</sys_attachment>
+        <sys_created_by>wybren.vanbeemdelust@bnc.nl</sys_created_by>
+        <sys_created_on>2021-02-03 15:22:38</sys_created_on>
+        <sys_id>6957e5e61b8a6050f2b3ed7cee4bcbc7</sys_id>
+    </sys_attachment_doc>
+</record_update>

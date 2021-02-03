@@ -6,19 +6,33 @@
         <layout><![CDATA[<table style="height: 100%; background-color: #f2f2f2;" border="0" width="100%" cellspacing="0" cellpadding="0" height="100%">
 <tbody>
 <tr>
-<td style="text-align: left; vertical-align: top; padding: 16px;" colspan="1">
-<table style="margin-left: auto; margin-right: auto;" border="0" width="696" cellspacing="0" cellpadding="0">
+<td style="text-align: left; vertical-align: top; padding: 20px;" colspan="1">
+<table style="margin-left: auto; margin-right: auto; height: 135px;" border="0" width="440" cellspacing="0" cellpadding="0">
 <tbody>
-<tr>
-<td style="background-color: #00a8e1; text-align: center; padding: 16px; width: 400px; height: 60px;">Logo</td>
+<tr style="height: 40px;">
+<td style="background-color: #ffffff; text-align: center; padding: 16px; height: 22px; width: 404px;"><img src="emailLogoBNC.png" width="176" height="18" /></td>
 </tr>
-<tr>
-<td style="padding-top: 32px; padding-bottom: 16px; border-radius: 5px; background-color: #ffffff; font-size: 10pt; color: #838383; font-family: arial, helvetica, sans-serif; line-height: 1.4;">
+<tr style="height: 44px;">
+<td style="padding: 0px 20px 20px 20px; border-radius: 5px; background-color: #ffffff; font-size: 10px; color: #707070; font-family: arial, helvetica, sans-serif; line-height: 15px; height: 41px; width: 396px;">
 <p>${notification:body}</p>
 </td>
 </tr>
-<tr>
-<td style="background-color: #00a8e1; text-align: center; padding: 16px; width: 400px; height: 60px;">Sharing Ideas &amp; IT</td>
+<tr style="height: 60px;">
+<td style="background-color: #ffffff; text-align: center; height: 60px; width: 396px; padding: 0px 20px;">
+<table style="border-collapse: collapse; width: 100%; height: 26px;" border="0">
+<tbody>
+<tr style="height: 13px; background-color: #f1f1f1; text-align: center;">
+<td style="text-align: center; padding: 5px; width: 100%; height: 13px; font-size: 10px; color: #707070; font-family: arial, helvetica, sans-serif; line-height: 15px;"><strong>Heb je toch nog vragen?</strong><br />Bekijk dan <a title="hier" href="https://www.bnc.nl/faq">hier</a> de meest gestelde vragen of neem <a title="contact" href="https://www.bnc.nl/help-en-ondersteuning-support/">contact</a> op met onze support. <br />We helpen je graag!</td>
+</tr>
+<tr style="height: 60px; background-color: #00a8e1; text-align: center;">
+<td style="width: 100%; text-align: center;"><img src="emailBannerBottomSharing.png" width="130" height="16" /></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr style="background-color: #ffffff; height: 20px;">
+<td style="text-align: center; height: 20px; width: 436px;"></td>
 </tr>
 </tbody>
 </table>
@@ -32,7 +46,7 @@
         <sys_created_on>2020-12-07 10:08:55</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>532331fb1b34ec50f2b3ed7cee4bcb3e</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Ecomm Layout</sys_name>
         <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
         <sys_policy/>
@@ -40,6 +54,6 @@
         <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
         <sys_update_name>sys_email_layout_532331fb1b34ec50f2b3ed7cee4bcb3e</sys_update_name>
         <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
-        <sys_updated_on>2020-12-07 11:26:17</sys_updated_on>
+        <sys_updated_on>2021-02-03 15:33:41</sys_updated_on>
     </sys_email_layout>
 </record_update>
