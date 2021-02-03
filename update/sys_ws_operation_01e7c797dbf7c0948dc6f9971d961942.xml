@@ -15,7 +15,7 @@
 		response.setStatus(400);
 		response.setBody({
 			"detail": "There was no body given",
-			"message": "Please add an json body with a email"
+			"message": "Please add an json body with a email" 
 		});
 	}
 
@@ -72,7 +72,7 @@
         <sys_created_on>2020-04-01 13:57:48</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>01e7c797dbf7c0948dc6f9971d961942</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>emailUserNewEcomAccount</sys_name>
         <sys_package display_value="Ecommerce" source="x_bocn_ecommerce">57251d50db5940508dc6f9971d9619df</sys_package>
         <sys_policy/>
@@ -80,7 +80,7 @@
         <sys_scope display_value="Ecommerce">57251d50db5940508dc6f9971d9619df</sys_scope>
         <sys_update_name>sys_ws_operation_01e7c797dbf7c0948dc6f9971d961942</sys_update_name>
         <sys_updated_by>wybren.vanbeemdelust@bnc.nl</sys_updated_by>
-        <sys_updated_on>2020-12-16 10:24:42</sys_updated_on>
+        <sys_updated_on>2021-02-03 16:22:39</sys_updated_on>
         <web_service_definition display_value="ECOM">f065ddd8db5940508dc6f9971d96197a</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
